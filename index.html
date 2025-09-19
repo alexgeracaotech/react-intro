@@ -17,11 +17,15 @@
 
         <script type="text/babel">
 
+            function Input({placeholder}) {
+                return <input type="text" placeholder={placeholder}/>
+            };
+
             function Inputs() {
                 return (
                     <div className="inputs">
-                        <input type="text" placeholder="Usuário" />
-                        <input type="text" placeholder="Senha" />
+                        <Input placeholder="Usuário"/>
+                        <Input placeholder="Senha"/>
                     </div>
                 );
             };
@@ -39,11 +43,15 @@
                 return <button type="button">Entrar</button>;
             };
 
+            function Small({children}) {
+                return <small>{children}</small>;
+            };
+
             function Smalls() {
                 return (
                     <div className="smalls">
-                        <small>Esqueceu a senha? Recupere <a href="#">aqui</a>.</small>
-                        <small>Não possui cadastro? Cadastre-se <a href="#">aqui</a>.</small>
+                        <Small>Esqueceu a senha? Recupere <a href="#">aqui</a>.</Small>
+                        <Small>Não possui cadastro? Cadastre-se <a href="#">aqui</a>.</Small>
                     </div>
                 );
             };
